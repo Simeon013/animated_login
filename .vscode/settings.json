@@ -1,0 +1,5 @@
+{
+    "cmake.ignoreCMakeListsMissing": true,
+    "yaml.schemaStore.enable": false,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}

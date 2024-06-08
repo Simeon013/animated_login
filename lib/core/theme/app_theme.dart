@@ -10,9 +10,7 @@ class AppTheme {
   static ThemeData light = ThemeData(
     brightness: Brightness.light,
     primaryColor: AppColor.primaryColor,
-    backgroundColor: AppColor.backgroundWhite,
     scaffoldBackgroundColor: AppColor.backgroundWhite,
-    primarySwatch: AppColor.primarySwatch,
     textTheme: TextTheme(
       displayLarge: _textStyle.displayLarge,
       displayMedium: _textStyle.displayMedium,
@@ -36,14 +34,16 @@ class AppTheme {
         color: AppColor.black,
       ),
     ),
+    colorScheme: ColorScheme.light(
+      primary: AppColor.primaryColor,
+      background: AppColor.backgroundWhite,
+    ),
   );
 
   static ThemeData dark = ThemeData(
     brightness: Brightness.dark,
-    backgroundColor: AppColor.backgroundBlack,
     scaffoldBackgroundColor: AppColor.backgroundBlack,
     primaryColor: AppColor.primaryColor,
-    primarySwatch: AppColor.primarySwatch,
     textTheme: TextTheme(
       displayLarge: _textStyle.displayLarge.copyWith(color: AppColor.white),
       displayMedium: _textStyle.displayMedium.copyWith(color: AppColor.white),
@@ -66,6 +66,10 @@ class AppTheme {
       actionsIconTheme: IconThemeData(
         color: AppColor.white,
       ),
+    ),
+    colorScheme: ColorScheme.dark(
+      primary: AppColor.primaryColor,
+      background: AppColor.backgroundBlack,
     ),
   );
 }
